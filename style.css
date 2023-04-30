@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+}
+/* Default font size */
+body{
+	font-size: 23px;
+}
+/* Font size for screens smaller than 600px */
+@media (max-width: 600px) {
+  body{
+    font-size: 19px;
+  }
+}
+/* Font size for screens larger than 1000px */
+@media (min-width: 1000px) {
+  body{
+    font-size: 25px;
+	border: 1px solid black;
+  }
+}
+#resume-form{
+	background-color: lavender;
+	/*display: none;*/
+}
+.header{
+	font-family: "Comic Neue", Impact;
+	font-size: 46px;
+	font-weight: bold;
+	border-bottom: double;
+}
+#resume-template{
+	display: none;
+}
+.left-column{
+	background-color: gainsboro;
+	border: 1px solid darkgrey;
+}
+.myImg{
+	width: 200px;
+	border-radius: 10%;
+}
+.card-header{
+	background-color: gainsboro;
+	padding: 6px 20px;
+}
+.card-body{
+	padding: 10px 20px;
+}
+.languagesCard, .interestsCard{
+	background-color: gainsboro;
+	border: none;
+}

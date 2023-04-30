@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Generator</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container mt-1 mb-2" id="resume-form">
+		<h3 class="header text-center pt-1 pb-2">Resume Generator</h3>
+		<div class="row">
+			 <!-- Personal Details -->
+			<div class="col-md-6 mt-3">
+				<h4 class="text-decoration-underline">Personal Details</h4>
+				
+				<!-- Photo -->
+				<div class="from-group mt-3 text-primary">
+            		<label for="imgField">Select Your Photo</label>
+            		<input type="file" id="imgField" class="form-control mt-1"/>
+            	</div>
+				
+				<!-- Name -->
+				<div class="form-group mt-3 text-primary">
+					<label for="nameField">Your Name:</label>
+					<input type="text" id="nameField" placeholder="Enter Your Name" class="form-control mt-1">
+				</div>
+				
+				<!-- Contact Number -->
+				<div class="form-group mt-3 text-primary">
+					<label for="contactField">Contact Number:</label>
+					<input type="tel" id="contactField" placeholder="Enter Your Contact Number" class="form-control mt-1">
+				</div>
+				
+				<!-- Email ID -->
+				<div class="form-group mt-3 text-primary">
+					<label for="emailField">Your Email ID:</label>
+					<input type="email" id="emailField" placeholder="Enter Your Email ID" class="form-control mt-1">
+				</div>
+				
+				<!-- Address -->
+				<div class="form-group mt-3 text-primary">
+					<label for="addressField">Your Address:</label>
+					<textarea id="addressField" rows="1" placeholder="Enter Your Address" class="form-control mt-1"></textarea> 
+				</div>
+				
+				<h5 class="mt-4 text-muted">Important Links :-</h5>
+				<!-- LinkedIn -->
+				<div class="form-group mt-3 text-primary">
+					<label for="linkedinField">LinkedIn:</label>
+					<input type="url" id="linkedinField" placeholder="Enter the link" class="form-control mt-1">
+				</div>
+				
+				<!-- GitHub -->
+				<div class="form-group mt-3 text-primary">
+					<label for="githubField">GitHub:</label>
+					<input type="url" id="githubField" placeholder="Enter the link" class="form-control mt-1">
+				</div>
+				
+				<!-- Website / Portfolio -->
+				<div class="form-group mt-3 mb-3 text-primary">
+					<label for="websiteField">Website / Portfolio:</label>
+					<input type="url" id="websiteField" placeholder="Enter the link" class="form-control mt-1">
+				</div>
+
+				<!-- Languages -->
+				<div class="form-group mt-3 text-primary">
+					<label for="languagesField">Languages:</label>
+					<textarea rows="2" id="languagesField" placeholder="Enter Your Languages" class="form-control mt-1"></textarea>
+				</div>
+
+				<!-- Interests -->
+				<div class="form-group mt-3 text-primary">
+					<label for="interestsField">Interests:</label>
+					<textarea rows="2" id="interestsField" placeholder="Enter Your Interests" class="form-control mt-1"></textarea>
+				</div>
+
+			</div>
+			<!-- Professional Details -->
+			<div class="col-md-6 mt-3">
+				<h4 class="text-decoration-underline">Professional Details</h4>
+
+				<!-- Profile Summary / About You -->
+				<div class="form-group mt-3 text-primary">
+					<label for="">Profile Summary / About You:</label>
+					<textarea id="profileField" rows="2" placeholder="Enter Your Profile Summary" class="form-control mt-1"></textarea> 
+				</div>
+
+				<!-- Education -->
+				<div class="form-group mt-3 text-primary" id="educationField">
+					<label for="">Education:</label>
+					<textarea rows="2" placeholder="Enter Your Education" class="form-control educationText mt-1"></textarea>
+					<!-- We will add new education textarea here -->
+
+					<div class="addBtn text-center mt-2" id="educationFieldBtn">
+						<button class="btn btn-info btn-sm border-dark" 
+						onclick="addEduBtn()">Add</button>
+					</div> 
+				</div>
+
+				<!-- Work Experience -->
+				<div class="form-group mt-3 text-primary" id="weField">
+					<label for="">Work Experience:</label>
+					<textarea rows="2" placeholder="Enter Your Work Experience" class="form-control workText mt-1"></textarea>
+					<!-- We will add new work experience textarea here -->
+
+					<div class="addBtn text-center mt-2" id="weFieldBtn">
+						<button class="btn btn-info btn-sm border-dark" 
+						onclick="addWeBtn()">Add</button>
+					</div> 
+				</div>
+
+				<!-- Projects -->
+				<div class="form-group mt-3 text-primary" id="projectsField">
+					<label for="">Projects:</label>
+					<textarea rows="2" placeholder="Enter Your Projects" class="form-control projectText mt-1"></textarea>
+					<!-- We will add new projects textarea here -->
+
+					<div class="addBtn text-center mt-2" id="projectsFieldBtn">
+						<button class="btn btn-info btn-sm border-dark"
+						onclick="addProjectsBtn()">Add</button>
+					</div> 
+				</div>
+				
+				<!-- Technical Skills -->
+				<div class="form-group mt-3 text-primary" id="TskillsField">
+					<label for="">Technical Skills:</label>
+					<textarea rows="2" placeholder="Enter Your Technical Skills" class="form-control TskillsText mt-1"></textarea>
+					<!-- We will add new technical skills textarea here -->
+
+					<div class="addBtn text-center mt-2" id="TskillsFieldBtn">
+						<button class="btn btn-info btn-sm border-dark"
+						onclick="addTSkillsBtn()">Add</button>
+					</div> 
+				</div>
+
+				<!-- Soft Skills -->
+				<div class="form-group mt-3 text-primary" id="SskillsField">
+					<label for="">Soft Skills:</label>
+					<textarea rows="2" placeholder="Enter Your Soft Skills" class="form-control SskillsText mt-1"></textarea>
+					<!-- We will add new soft skills textarea here -->
+
+					<div class="addBtn text-center mt-2" id="SskillsFieldBtn">
+						<button class="btn btn-info btn-sm border-dark"
+						onclick="addSSkillsBtn()">Add</button>
+					</div> 
+				</div>
+
+				<!-- Awards and Achievements -->
+				<div class="form-group mt-3 text-primary" id="awardsField">
+					<label for="">Awards and Achievements:</label>
+					<textarea rows="2" placeholder="Enter Your Achievements" class="form-control awardsText mt-1"></textarea>
+					<!-- We will add new awards textarea here -->
+
+					<div class="addBtn text-center mt-2" id="awardsFieldBtn">
+						<button class="btn btn-info btn-sm border-dark"
+						onclick="addAwardsBtn()">Add</button>
+					</div> 
+				</div>
+
+			</div> 
+
+			<!-- Generate Button -->
+			<div class="generateBtn text-center mt-4 pb-4">
+				<button onclick="generate()" class="btn btn-warning border-dark">Generate Resume</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id="resume-template">
+		<div class="row">
+			<!-- left column -->
+			<div class="col-md-4 text-center my-2 py-2 left-column">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYSprYSGY7wv-OyUUMHyEYhPtVO1juHDCtVg&usqp=CAU"
+				class="img-fluid my-2"
+				id="myImg" 
+				alt="Profile Picture">
+
+				<div class="container left-column-details">
+					<h3 id="uName">--Name--</h3>
+            		<hr>
+            		<p id="uPhNumber">--Phone Number--</p>
+            		<p id="uEmail">--Email--</p>
+            		<p id="uAddress">--Address--</p>
+					<hr>
+				</div>
+				<!-- Important Links -->
+				<p> <a id="linkedinT" href="#" target="_blank">LinkedIn</a> </p>
+				<p> <a id="githubT" href="#" target="_blank">GitHub</a> </p>
+				<p> <a id="websiteT" href="#" target="_blank">Portfolio Website</a> </p>
+
+				<!-- Languages -->
+				<div class="card mt-5 languagesCard">
+					<div class="card-header languagesCardHeader">
+						<h5>Languages</h5>
+					</div>
+					<div id="languagesT" class="card-body">
+						<p>These are my Languages.</p>
+					</div>
+				</div>
+
+				<!-- Interests -->
+				<div class="card mb-3 interestsCard">
+					<div class="card-header">
+						<h5>Interests</h5>
+					</div>
+					<div id="interestsT" class="card-body">
+						<p>These are my Interests.</p>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- right column -->
+			<div class="col-md-8 py-2 right-column">
+
+				<!-- Profile Summary -->
+				<div class="card mb-3">
+					<div class="card-header">
+						<h5>Profile Summary</h5>
+					</div>
+					<div id="profileT" class="card-body">
+						<p>This is my Profile Summary.</p>
+					</div>
+				</div>
+
+				<!-- Academic Qualification -->
+				<div class="card mb-3">
+					<div class="card-header">
+						<h5>Academic Qualification</h5>
+					</div>
+					<div class="card-body">
+						<ul id="academicT">
+							<li>This is my Academic Qualification.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Work Experience -->
+				<div class="card mb-3">
+					<div class="card-header">
+						<h5>Work Experience</h5>
+					</div>
+					<div class="card-body">
+						<ul id="workT">
+							<li>This is my Work Experience.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Projects -->
+				<div class="card mb-3">
+					<div class="card-header">
+						<h5>Projects</h5>
+					</div>
+					<div class="card-body">
+						<ul id="projectsT">
+							<li>This is my Project.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Skills -->
+				<div class="card mb-3">
+					<div class="card-header">
+						<h5>Skills</h5>
+					</div>
+					<div class="card-body">
+						<h6><strong>Technical Skills</strong></h6>
+						<ul id="TskillsT">
+							<li>Technical Skills.</li>
+						</ul>
+						<h6><strong>Soft Skills</strong></h6>
+						<ul id="SskillsT">
+							<li>Soft Skills.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Awards and Achievements -->
+				<div class="card">
+					<div class="card-header">
+						<h5>Awards and Achievements</h5>
+					</div>
+					<div class="card-body">
+						<ul id="awardsT">
+							<li>These are my Awards and Achievements.</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="downloadBtn text-center my-4 pb-2">
+			<button onclick="downloadResume()" class="btn btn-warning border-dark">Download Resume</button>
+		</div>
+	</div>
+		
+  <!-- Bootstrap JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
