@@ -1,4 +1,4 @@
-# Resume-Generator 𝐑𝐞𝐬𝐮𝐦𝐞 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐨𝐫 - A responsive and user-friendly utility tool which can be used by anyone looking to create their resume. The resume can be downloaded as pdf file and then can be used as desired.
+# Resume-Generator - A responsive and user-friendly utility tool which can be used by anyone looking to create their resume. The resume can be downloaded as pdf file and then can be used as desired.
 
 Some of the key features of my project:
 》Responsive.
